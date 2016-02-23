@@ -225,7 +225,7 @@ var TaskText = React.createClass({
     },
     sendUpdate: function(){
         this.props.handleHoverToEdit({_id: this.props._id, text: this.state.text});
-        this.setState({text: '', edit: false});
+        this.setState({text: this.props.text, edit: false});
     },
     handleKey: function(key){
         if( key.charCode == 13 || key.keyCode == 13 ){
